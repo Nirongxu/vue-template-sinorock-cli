@@ -1,8 +1,8 @@
 {
-  "name": "{{ name }}",
+  "name": "<%= name %>",
   "version": "1.0.0",
-  "description": "{{ description }}",
-  "author": "{{ author }}",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -10,12 +10,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"{{#router}},
-    "vue-router": "^3.0.1"{{/router}}
+    "vue": "^2.5.2",
+    <% if (router) {%>
+    "vue-router": "^3.0.1"
+    <% } %>
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
-    {{#eslint}}
+    <% if (eslint) {%>
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
@@ -25,7 +27,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.2.0",
-    {{/eslint}}
+    <% } %>
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
