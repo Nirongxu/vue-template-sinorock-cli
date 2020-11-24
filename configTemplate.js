@@ -10,19 +10,19 @@ module.exports = [
     type: 'input',
     name: 'name',
     message: 'project name',
-    default: 'vue-template-sinorock-cli',
+    default: 'zy-vue-template-cli',
   },
   {
     type: 'input',
     name: 'description',
     message: 'description',
-    default: '通过sinorock-cli可以定制化编译成项目需要的专属模板',
+    default: '通过zyjk-cli可以定制化编译成项目需要的专属模板',
   },
   {
     type: 'input',
     name: 'author',
     message: 'author',
-    default: 'sinorock',
+    default: 'zyjk',
   },
   {
     type: 'confirm',
@@ -34,6 +34,12 @@ module.exports = [
     type: 'confirm',
     name: 'eslint',
     message: '是否安装eslint',
+    default: true,
+  },
+  {
+    type: 'confirm',
+    name: 'typescript',
+    message: '是否使用typescript',
     default: true,
   },
 ];
