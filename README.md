@@ -1,2 +1,2 @@
-# vue-template-sinorock-cli
-sinorock-cli
+# zy-vue-template-cli
+zyjk-cli
